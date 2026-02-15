@@ -1,0 +1,60 @@
+Hello I have started learning Langchain for my career growth
+
+I am referring this official langchain docs to learn Langchain.
+
+#Official langchain learn site
+https://docs.langchain.com/oss/python/langchain/
+
+First I installed Langchain on my system. As I am using fedora linus I used this command.
+
+------------------------------------------------------------------------------------------------------------------
+#Installing langchain
+pip install -U langchain
+
+But make sure it has python 3.10+ installed.
+
+LangChain provides integrations to hundreds of LLMs and thousands of other integrations. 
+These live in independent provider packages.
+
+# Installing the OpenAI integration
+pip install -U langchain-openai
+
+# Installing the Anthropic integration
+pip install -U langchain-anthropic
+
+Not only these you can use any LLM model, but you should get API key of that respective model,
+Mostly there are not free
+---------------------------------------------------------------------------------------------------------------
+
+Hence I am using different appproach.
+
+Now what I am doing, this method is free. I am installing LLM locally in my system.
+Here there is no paid API option.
+
+#install the Ollama 
+curl -fsSL https://ollama.com/install.sh | sh
+
+#Complete the installation by installing the model ( If your system has 16GB Ram use this )
+
+ollama pull llama3
+
+ollama pull llama3.1 #Again I pulled this one as llama3 doesnot support tool calling.
+
+
+#If you have 4GB ram then use this
+
+ollama pull phi3
+
+#Then you can run and use like a GenAI model on the terminal.
+
+ollama run llama3 #(Replace llama3 if you have installed difefrent one)
+
+#Now you can ask anything ust like chatgt or anything.
+
+
+
+
+ The Ollama API is now available at 127.0.0.1:11434.
+>>> Install complete. Run "ollama" from the command line.
+>>> AMD GPU ready.
+

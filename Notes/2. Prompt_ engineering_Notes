@@ -1,0 +1,68 @@
+Prompt : It is not ust a question which we ask to LLM.
+
+It is INSTRUCTIONS + CONTEXT + CONSTRAINTS + OUTPUT FORMAT
+
+Lets dive into an example: 
+
+Who is the CM of karnataka. [Not better prompt]
+
+Lets make it professional:
+
+You are a political assistant. Answer in one line. Who is the CM of Karnataka? [Better prompt]
+
+Here in the prompt we added role and also the format of output
+
+-----------------------------------------------------------------------------------------------------------
+1) Role:
+        Always define a role.
+
+        eg: You are strict data assistant. Return only factual answers
+
+        Remeber role changes behaviour of LLM
+
+2) Be explicit, Not Implicit:
+        LLM's are not mind reader, always keep this in your mind.
+
+        bad prompt: Give me info about Tumkur.
+        Better prompt: Give state and population of Tumkur. 
+            Give in this format: 
+                State:
+                Population:
+
+3) Reduce hallucination:
+            Add CONSTRAINTS like: 
+             If you dont know the answer or you dont have info about this, say data is not available.
+             Do not Guess
+
+        This reduces fake answers.
+
+4) Few shot prompting:
+        Instead of explaining rules, show examples.
+
+        eg:
+            Q. Population of Chennai ?
+            A. 6 million
+
+            Q. Population of Banglore ?
+            A. 5 million
+
+            Q. Population of Pune?
+            A. 
+
+        Here model understands the pattern automatically.
+        Because examples are stronger than instructions.
+
+5) Temperature Awareness:
+        Low Temperature (0-0.2)
+            Deterministic
+            Good for agents
+            Good for structured output
+
+        High Temperature :
+            Creative
+            variable
+            Bad for tool calling
+
+        For langchain use Temperature = 0
+
+

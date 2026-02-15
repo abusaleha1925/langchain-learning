@@ -1,0 +1,47 @@
+Langchain : LangChain is an open source framework with a pre-built agent architecture and integrations for any model or tool — so you can build agents that adapt as fast as the ecosystem evolves.
+
+In simple, A framework to orchestrate LLMs, tools, memory, and workflows.
+It helps to build: Agents, RAG systems, Tool-calling apps, Multi step workflow.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Things to know before starting langchain:
+
+1. Python Fundamentals (Very Important)
+
+Functions
+Decorators (@tool)
+Dictionaries
+Loops
+Classes (basic)
+Virtual environments
+
+LangChain is just Python orchestration around LLMs. 
+
+2. Prompt Engineering Basics [I have covered this info, please refer the Prmompt engineering notes]
+
+What is a system prompt
+Message roles (system / user / assistant)
+How temperature affects output
+Why structured prompts work better
+Why vague prompts fail
+
+3. How LLMs Actually Work [ I have covered this info, please refer the LLM notes]
+
+You don’t need deep math, but you must understand:
+
+LLMs predict next tokens
+They are probabilistic
+They hallucinate
+They do not “know” facts in real-time
+They follow instructions imperfectly
+
+If you don’t understand this, LangChain will feel random.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Understand the difference,
+
+1. LLM -> Generates text.
+2. Tool -> A deterministic fuction.
+3. Agent -> An LLM that decides which tool to call.
+4. Chain -> A fixed sequence of steps.
